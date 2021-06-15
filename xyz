@@ -1,0 +1,38 @@
+#include<bits/stdc++.h>
+using namespace std;
+int main()
+{
+int k,arr[100],n,i,amt,temp,c=0;
+cout<<"\nEnter no. of types of items:";
+cin>>n;
+cout<<"\nEnter prices of gadgets:";
+for(i=0;i<n;i++)
+cin>>arr[i];
+cout<<"\nEnter amount that customer has:";
+cin>>amt;
+for(i=0;i<n;i++)
+{
+for(j=i+1;j<n;j++)
+{
+if(arr[j]<arr[i])
+{
+temp=arr[i];
+arr[i]=arr[j];
+arr[j]=temp;
+}
+}
+}
+for(i=0;i<n;i++)
+{
+while((amt<=arr[i])&&((amt%arr[i])==0))
+{
+c++;
+}
+break;
+}
+if(c==k)
+cout<<"\nRight";
+else
+cout<<"\nWrong";
+return 0;
+}
