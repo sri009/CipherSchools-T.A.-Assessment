@@ -2,7 +2,7 @@
 using namespace std;
 int main()
 {
-int k,arr[100],n,i,amt,temp,c=0;
+int k,arr[100],n,i,j,amt,temp,c=0;
 cout<<"\nEnter no. of types of items:";
 cin>>n;
 cout<<"\nEnter prices of gadgets:";
@@ -26,11 +26,8 @@ arr[j]=temp;
 }
 for(i=0;i<n;i++)
 {
-while((amt>=arr[i])&&((amt%arr[i])==0))
-{
+if((amt>=arr[i])&&((amt%arr[i])==0))
 c++;
-}
-break;
 }
 if(c==k)
 cout<<"\nRight";
