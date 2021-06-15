@@ -10,6 +10,8 @@ for(i=0;i<n;i++)
 cin>>arr[i];
 cout<<"\nEnter amount that customer has:";
 cin>>amt;
+cout<<"\nEnter value told by robot:";
+cin>>k;
 for(i=0;i<n;i++)
 {
 for(j=i+1;j<n;j++)
