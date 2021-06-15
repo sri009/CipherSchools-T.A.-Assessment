@@ -26,7 +26,7 @@ arr[j]=temp;
 }
 for(i=0;i<n;i++)
 {
-while((amt<=arr[i])&&((amt%arr[i])==0))
+while((amt>=arr[i])&&((amt%arr[i])==0))
 {
 c++;
 }
